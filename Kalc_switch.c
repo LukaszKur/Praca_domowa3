@@ -35,22 +35,21 @@ double kalkulator(double a,double b,char wybor)
 
         case 'I':
             return dziel(a,b);
-        case 'W':
-            wyjscie();
+        default:
+            printf("Dokonano zlego wyboru. Zamykanie programu!");
     }
 }
 int main() {
-
+    printf("Kalkulator z mozliwoscia wyboru:\n");
     printf("\n");
     printf("D - Dodawanie, O - Odejmowanie, M - Mnozenie, I - Dzielenie, W - Wyjscie\n");
     printf("Wybierz litere przypisana do dzialania\n");
     scanf("%c", &wybor);
-    printf("Kalkulator z mozliwoscia wyboru:\n");
-    printf("Podaj a: ");
+    printf("\nPodaj a: ");
     scanf("%lf", &a);
     printf("Podaj b: ");
     scanf("%lf", &b);
-    printf("Wynik wybranego dzialania: %lf", kalkulator(a, b, wybor));
+    printf("\nWynik wybranego dzialania: %lf", kalkulator(a, b, wybor));
 
     return 0;
 }
